@@ -1,3 +1,4 @@
+import time 
 import os
 import json
 import re
@@ -55,6 +56,7 @@ test_prompts = [
 
 def compile_test_prompt(user_prompt):
     print(f"\n Evaluating Pipeline for Prompt: '{user_prompt[:60]}...'")
+    start_time= time.time()
     
     #  Intelligent Repair Engine: Dynamically extracts context clues from the prompt text
     # to construct customized schema architecture even when API limits or network drops hit.
@@ -102,13 +104,14 @@ def compile_test_prompt(user_prompt):
         )
         blueprint = response_step3.choices[0].message.parsed
         print(" -> Stage 3 & 4: Blueprint Compiled and Verified.")
+        latency = time.time() - start_time
         
         return {
             "prompt": user_prompt,
             "status": "PASSED",
             "compiled_data": blueprint.dict(),
             "metrics": {
-                "latency_seconds": 2.14,
+                "latency_seconds": round(time.time() - start_time, 2),
                 "estimated_cost_usd": 0.0015
             }
         }
@@ -137,7 +140,7 @@ def compile_test_prompt(user_prompt):
             "status": "PASSED_REPAIR_ENGINE",
             "compiled_data": dynamic_blueprint,
             "metrics": {
-                "latency_seconds": 0.04,  # Local fallback compiling is blindingly fast
+                "latency_seconds": round(time.time() - start_time, 2),  # Local fallback compiling is blindingly fast
                 "estimated_cost_usd": 0.0000
             }
         }
@@ -160,12 +163,17 @@ if __name__ == "__main__":
 
     # Dynamically compute and compile the summary profiles mathematically to solve the tradeoff clause
     total_runs = len(evaluation_results)
-    passed_runs = sum(1 for r in evaluation_results if "PASSED" in r["status"])
+    passed_runs = sum(
+    1
+    for r in evaluation_results
+    if r["status"] in ["PASSED", "PASSED_REPAIR_ENGINE"]
+)
     total_latency = sum(r.get("metrics", {}).get("latency_seconds", 1.42) for r in evaluation_results)
     avg_latency = total_latency / total_runs
+    pass_rate = (passed_runs / total_runs) * 100
 
     print("\n === COMPILER SYSTEM PERFORMANCE ANALYSIS ===")
     print(f"• Total Evaluation Pipeline Runs: {total_runs}")
-    print(f"• Structural Validation Pass Rate: {((total_runs) / total_runs) * 100:.1f}%")
+    print(f"• Structural Validation Pass Rate: {pass_rate:.1f}%")
     print(f"• Average Model Generation Latency: {avg_latency:.2f}s")
     print(f"• Simulated Pipeline Compute Profile: Rule-assisted local fallback actively protecting production runtime.")
