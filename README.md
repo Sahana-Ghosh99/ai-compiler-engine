@@ -21,3 +21,10 @@ An intelligent, resilient system that acts like a software architecture compiler
 - *Total Execution Pipeline Runs:* 20 / 20
 - *Structural Validation Pass Rate:* 100.0%
 - *Average Run Latency:* ~0.04s (Optimized via intelligent local fallback compiler activation)
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Sahana-Ghosh99/ai-compiler-engine.git
+cd ai-compiler-engine
