@@ -1,0 +1,908 @@
+[
+    {
+        "prompt": "Build a medical clinic booking platform where patients can select doctors, schedule visits, and view test results. Doctors have their own schedule management dashboards.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/appointments/fetch",
+                    "/slots/fetch",
+                    "/users/update",
+                    "/sessions/update",
+                    "/appointments/update",
+                    "/slots/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions",
+                    "appointments",
+                    "slots"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions, appointments, slots"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Design an e-commerce inventory app for warehouse staff to scan barcodes, track item counts across locations, and trigger automatic reorders when stock drops below 10 units.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "StaffDashboard",
+                    "UserDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/products/fetch",
+                    "/stock_levels/fetch",
+                    "/reorders/fetch",
+                    "/users/update",
+                    "/sessions/update",
+                    "/products/update",
+                    "/stock_levels/update",
+                    "/reorders/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions",
+                    "products",
+                    "stock_levels",
+                    "reorders"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin",
+                    "staff",
+                    "user"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions, products, stock_levels, reorders"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Create a classroom assignment manager. Teachers post homework tasks with rubrics, students upload submissions, and a grading system updates a class-wide leaderboard.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/assignments/fetch",
+                    "/submissions/fetch",
+                    "/grades/fetch",
+                    "/users/update",
+                    "/sessions/update",
+                    "/assignments/update",
+                    "/submissions/update",
+                    "/grades/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions",
+                    "assignments",
+                    "submissions",
+                    "grades"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions, assignments, submissions, grades"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build a ride-sharing fleet dispatcher displaying active driver GPS coordinates, optimized trip matching, and automated distance fare calculations.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/trips/fetch",
+                    "/drivers/fetch",
+                    "/locations/fetch",
+                    "/users/update",
+                    "/sessions/update",
+                    "/trips/update",
+                    "/drivers/update",
+                    "/locations/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions",
+                    "trips",
+                    "drivers",
+                    "locations"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions, trips, drivers, locations"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Create a mobile fitness tracking application containing structured workout templates, streak metrics, and localized peer challenge groups.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Design a restaurant POS system managing floor layouts, real-time table modifications, automated kitchen printouts, and multi-split invoice payments.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build a marketplace portal with listing photo uploads, granular search query filters, and instant scheduling integrations with verified real estate agents.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Create a personal finance budget tracker that links checking account variables to monthly allocation forecasting models.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Design a secure legal document repository containing strict version control timelines, digital signature authentication, and dynamic clearance tiers.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build an HR applicant tracking platform featuring step-based visual pipeline columns, custom review forms, and multi-party interviewer evaluation blocks.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Make an app that is sort of like a social network for trading cards but also maybe a marketplace, just keep it very minimal and clean.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build an enterprise database engine that explicitly guarantees it never saves records to disk but lets users query historical logs.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Create an online application interface where users can click an active button and instantly receive items without any configuration details.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "A full-stack collaborative editor tool that requires real-time websocket synchronization across users but runs entirely with no backend server footprint.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build a platform to easily track inventory levels and sales performance logs across an individual storefront location.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/products/fetch",
+                    "/stock_levels/fetch",
+                    "/reorders/fetch",
+                    "/users/update",
+                    "/sessions/update",
+                    "/products/update",
+                    "/stock_levels/update",
+                    "/reorders/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions",
+                    "products",
+                    "stock_levels",
+                    "reorders"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions, products, stock_levels, reorders"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "A peer-to-peer messaging layout that transmits custom multimedia messages without deploying transport protocols or connection routes.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Design a university course enrollment panel without implementing permission classes, distinct profiles, or authentication roles for teachers and students.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Create a flight tracking interface dashboard that explicitly treats all outbound API data streams as broken or restricted.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Develop an open-ended software tracker to map general target milestones and internal system workflow operations.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    },
+    {
+        "prompt": "Build an ultra high-speed video game asset rendering backend platform but do not include media streaming routes, codecs, or network channels.",
+        "status": "PASSED_REPAIR_ENGINE",
+        "compiled_data": {
+            "ui_schema": {
+                "layout": "DynamicDashboardView",
+                "components": [
+                    "AdminDashboard",
+                    "MainDataGrid",
+                    "ControlPanel"
+                ]
+            },
+            "api_schema": {
+                "base_url": "/api/v1",
+                "endpoints": [
+                    "/users/fetch",
+                    "/sessions/fetch",
+                    "/users/update",
+                    "/sessions/update"
+                ]
+            },
+            "db_schema": {
+                "tables": [
+                    "users",
+                    "sessions"
+                ],
+                "relationships": "Strict relational foreign keys enforced."
+            },
+            "auth_system": {
+                "roles_allowed": [
+                    "admin"
+                ],
+                "strategy": "JWT Authorization Tiers"
+            },
+            "business_logic": {
+                "context_rules": "Enforcing validation boundaries based on system entities: users, sessions"
+            }
+        },
+        "metrics": {
+            "latency_seconds": 0.04,
+            "estimated_cost_usd": 0.0
+        }
+    }
+]

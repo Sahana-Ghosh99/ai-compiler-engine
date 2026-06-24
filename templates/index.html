@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Software Compiler Interface</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container my-5">
+        <h1 class="mb-4 text-center text-primary">⚙️ Multi-Stage AI Software Compiler</h1>
+        <p class="text-muted text-center">Natural language prompt → Structured architectural layout & execution schemas.</p>
+        
+        <div class="card p-4 shadow-sm mb-4">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="prompt" class="form-label fw-bold">Enter Application Description:</label>
+                    <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="e.g., Build a CRM with login, contacts, dashboard, role-based access, and premium plan with payments. Admins can see analytics.">{% if prompt %}{{ prompt }}{% endif %}</textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100 fw-bold">Compile Specification Blueprint</button>
+            </form>
+        </div>
+
+        {% if result %}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3 mb-3 border-warning shadow-sm">
+                    <h4 class="text-warning">⚡ Runtime Execution Logs</h4>
+                    <span class="badge {% if result.status == 'COMPILED_SUCCESSFULLY' %}bg-success{% else %}bg-danger{% endif %} mb-2">{{ result.status }}</span>
+                    <ul class="list-group list-group-flush small">
+                        {% for log in result.validation_logs %}
+                            <li class="list-group-item bg-transparent text-secondary">✓ {{ log }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card p-3 shadow-sm">
+                    <h4 class="text-dark">📁 Compiled Blueprint Output (Strict JSON)</h4>
+                    <pre class="bg-dark text-light p-3 rounded" style="max-height: 500px; overflow-y: auto;"><code>{{ result | tojson(indent=2) }}</code></pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
