@@ -14,7 +14,7 @@
             <form method="post">
                 <div class="mb-3">
                     <label for="prompt" class="form-label fw-bold">Enter Application Description:</label>
-                    <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="e.g., Build a CRM with login, contacts, dashboard, role-based access, and premium plan with payments. Admins can see analytics.">{% if prompt %}{{ prompt }}{% endif %}</textarea>
+                    <textarea class="form-control" id="prompt" name="user_prompt" rows="3" placeholder="e.g., Build a CRM with login, contacts, dashboard, role-based access, and premium plan with payments. Admins can see analytics.">{% if prompt %}{{ prompt }}{% endif %}</textarea>
                 </div>
                 <button type="submit" class="btn btn-success w-100 fw-bold">Compile Specification Blueprint</button>
             </form>
